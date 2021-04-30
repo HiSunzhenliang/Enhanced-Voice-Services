@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{824DA4CF-06F0-45C9-929A-8792F0E19C3E}</ProjectGuid>
+    <RootNamespace>evs_enc</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.26228.10</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\</OutDir>
+    <IntDir>.\Release_Enc\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+    <TargetName>EVS_cod</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\</OutDir>
+    <IntDir>.\Debug_Enc\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+    <TargetName>EVS_cod</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <CustomBuildStep>
+      <Message />
+    </CustomBuildStep>
+    <Midl>
+      <TypeLibraryName>.\Release/vbr_enc.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <AdditionalIncludeDirectories>..\lib_enc;..\lib_dec;..\lib_com;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling />
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile />
+      <ProgramDataBaseFileName>$(IntDir)ens_enc.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat />
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4100;4244;4310;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0c0c</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>..\EVS_cod.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ManifestFile />
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Release/vbr_enc.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <CustomBuildStep>
+      <Message />
+    </CustomBuildStep>
+    <Midl>
+      <TypeLibraryName>.\Debug/vbr_enc.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\lib_enc;..\lib_dec;..\lib_com;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling />
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile />
+      <ProgramDataBaseFileName>$(IntDir)ens_enc.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4100;4244;4310;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0c0c</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies />
+      <OutputFile>..\EVS_cod.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ManifestFile />
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/evs_enc.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences />
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command />
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\lib_enc\ACcontextMapping_enc.c" />
+    <ClCompile Include="..\lib_enc\acelp_core_enc.c" />
+    <ClCompile Include="..\lib_enc\acelp_core_switch_enc.c" />
+    <ClCompile Include="..\lib_enc\acelp_enc_util.c" />
+    <ClCompile Include="..\lib_enc\amr_wb_enc.c" />
+    <ClCompile Include="..\lib_enc\analy_lp.c" />
+    <ClCompile Include="..\lib_enc\analy_sp.c" />
+    <ClCompile Include="..\lib_enc\arith_coder_enc.c" />
+    <ClCompile Include="..\lib_enc\ari_enc.c" />
+    <ClCompile Include="..\lib_enc\ari_hm_enc.c" />
+    <ClCompile Include="..\lib_enc\avq_cod.c" />
+    <ClCompile Include="..\lib_enc\bass_psfilter_enc.c" />
+    <ClCompile Include="..\lib_enc\bw_detect.c" />
+    <ClCompile Include="..\lib_enc\cng_enc.c" />
+    <ClCompile Include="..\lib_enc\cod2t32.c" />
+    <ClCompile Include="..\lib_enc\cod4t64.c" />
+    <ClCompile Include="..\lib_enc\cod_ace.c" />
+    <ClCompile Include="..\lib_enc\cod_tcx.c" />
+    <ClCompile Include="..\lib_enc\cod_uv.c" />
+    <ClCompile Include="..\lib_enc\comvad_decision.c" />
+    <ClCompile Include="..\lib_enc\core_enc_2div.c" />
+    <ClCompile Include="..\lib_enc\core_enc_init.c" />
+    <ClCompile Include="..\lib_enc\core_enc_ol.c" />
+    <ClCompile Include="..\lib_enc\core_enc_reconf.c" />
+    <ClCompile Include="..\lib_enc\core_enc_switch.c" />
+    <ClCompile Include="..\lib_enc\core_enc_updt.c" />
+    <ClCompile Include="..\lib_enc\core_switching_enc.c" />
+    <ClCompile Include="..\lib_enc\corr_xh.c" />
+    <ClCompile Include="..\lib_enc\cor_shif.c" />
+    <ClCompile Include="..\lib_enc\decision_matrix_enc.c" />
+    <ClCompile Include="..\lib_enc\detect_transient.c" />
+    <ClCompile Include="..\lib_enc\diffcod.c" />
+    <ClCompile Include="..\lib_enc\dtx.c" />
+    <ClCompile Include="..\lib_enc\encoder.c" />
+    <ClCompile Include="..\lib_enc\enc_acelp.c" />
+    <ClCompile Include="..\lib_enc\enc_acelpx.c" />
+    <ClCompile Include="..\lib_enc\enc_acelp_tcx_main.c" />
+    <ClCompile Include="..\lib_enc\enc_amr_wb.c" />
+    <ClCompile Include="..\lib_enc\enc_gain.c" />
+    <ClCompile Include="..\lib_enc\enc_gen_voic.c" />
+    <ClCompile Include="..\lib_enc\enc_gen_voic_rf.c" />
+    <ClCompile Include="..\lib_enc\enc_higher_acelp.c" />
+    <ClCompile Include="..\lib_enc\enc_nelp.c" />
+    <ClCompile Include="..\lib_enc\enc_pit_exc.c" />
+    <ClCompile Include="..\lib_enc\enc_ppp.c" />
+    <ClCompile Include="..\lib_enc\enc_prm.c" />
+    <ClCompile Include="..\lib_enc\enc_tran.c" />
+    <ClCompile Include="..\lib_enc\enc_uv.c" />
+    <ClCompile Include="..\lib_enc\energy.c" />
+    <ClCompile Include="..\lib_enc\eval_pit_contr.c" />
+    <ClCompile Include="..\lib_enc\evs_enc.c" />
+    <ClCompile Include="..\lib_enc\ext_sig_ana.c" />
+    <ClCompile Include="..\lib_enc\fd_cng_enc.c" />
+    <ClCompile Include="..\lib_enc\FEC_enc.c" />
+    <ClCompile Include="..\lib_enc\find_tar.c" />
+    <ClCompile Include="..\lib_enc\find_tilt.c" />
+    <ClCompile Include="..\lib_enc\find_uv.c" />
+    <ClCompile Include="..\lib_enc\find_wsp.c" />
+    <ClCompile Include="..\lib_enc\frame_spec_dif_cor_rate.c" />
+    <ClCompile Include="..\lib_enc\gain_enc.c" />
+    <ClCompile Include="..\lib_enc\gaus_enc.c" />
+    <ClCompile Include="..\lib_enc\gp_clip.c" />
+    <ClCompile Include="..\lib_enc\gs_enc.c" />
+    <ClCompile Include="..\lib_enc\guided_plc_enc.c" />
+    <ClCompile Include="..\lib_enc\hf_cod_amrwb.c" />
+    <ClCompile Include="..\lib_enc\hq_classifier_enc.c" />
+    <ClCompile Include="..\lib_enc\hq_core_enc.c" />
+    <ClCompile Include="..\lib_enc\hq_env_enc.c" />
+    <ClCompile Include="..\lib_enc\hq_hr_enc.c" />
+    <ClCompile Include="..\lib_enc\hq_lr_enc.c" />
+    <ClCompile Include="..\lib_enc\hvq_enc.c" />
+    <ClCompile Include="..\lib_enc\igf_enc.c" />
+    <ClCompile Include="..\lib_enc\igf_scf_enc.c" />
+    <ClCompile Include="..\lib_enc\init_enc.c" />
+    <ClCompile Include="..\lib_enc\inov_enc.c" />
+    <ClCompile Include="..\lib_enc\io_enc.c" />
+    <ClCompile Include="..\lib_enc\isf_enc_amr_wb.c" />
+    <ClCompile Include="..\lib_enc\lead_indexing.c" />
+    <ClCompile Include="..\lib_enc\long_enr.c" />
+    <ClCompile Include="..\lib_enc\lp_exc_e.c" />
+    <ClCompile Include="..\lib_enc\lsf_enc.c" />
+    <ClCompile Include="..\lib_enc\lsf_msvq_ma_enc.c" />
+    <ClCompile Include="..\lib_enc\ltd_stable.c" />
+    <ClCompile Include="..\lib_enc\mdct_classifier.c" />
+    <ClCompile Include="..\lib_enc\mdct_selector.c" />
+    <ClCompile Include="..\lib_enc\mslvq_enc.c" />
+    <ClCompile Include="..\lib_enc\multi_harm.c" />
+    <ClCompile Include="..\lib_enc\nelp_enc.c" />
+    <ClCompile Include="..\lib_enc\noise_adjust.c" />
+    <ClCompile Include="..\lib_enc\nois_est.c" />
+    <ClCompile Include="..\lib_enc\normalizecoefs.c" />
+    <ClCompile Include="..\lib_enc\peak_vq_enc.c" />
+    <ClCompile Include="..\lib_enc\pitch_ol.c" />
+    <ClCompile Include="..\lib_enc\pitch_ol2.c" />
+    <ClCompile Include="..\lib_enc\pit_enc.c" />
+    <ClCompile Include="..\lib_enc\plc_enc_ext.c" />
+    <ClCompile Include="..\lib_enc\ppp_enc.c" />
+    <ClCompile Include="..\lib_enc\pre_proc.c" />
+    <ClCompile Include="..\lib_enc\pvq_core_enc.c" />
+    <ClCompile Include="..\lib_enc\pvq_encode.c" />
+    <ClCompile Include="..\lib_enc\qlpc_avq.c" />
+    <ClCompile Include="..\lib_enc\qlpc_stoch.c" />
+    <ClCompile Include="..\lib_enc\q_gain2p.c" />
+    <ClCompile Include="..\lib_enc\range_enc.c" />
+    <ClCompile Include="..\lib_enc\re8_cod.c" />
+    <ClCompile Include="..\lib_enc\reordernorm.c" />
+    <ClCompile Include="..\lib_enc\rom_enc.c" />
+    <ClCompile Include="..\lib_enc\rst_enc.c" />
+    <ClCompile Include="..\lib_enc\setmodeindex.c" />
+    <ClCompile Include="..\lib_enc\set_impulse.c" />
+    <ClCompile Include="..\lib_enc\sig_clas.c" />
+    <ClCompile Include="..\lib_enc\SNR_calc.c" />
+    <ClCompile Include="..\lib_enc\spec_center.c" />
+    <ClCompile Include="..\lib_enc\spec_flatness.c" />
+    <ClCompile Include="..\lib_enc\speech_music_classif.c" />
+    <ClCompile Include="..\lib_enc\stat_noise_uv_enc.c" />
+    <ClCompile Include="..\lib_enc\subband_fft.c" />
+    <ClCompile Include="..\lib_enc\swb_bwe_enc.c" />
+    <ClCompile Include="..\lib_enc\swb_bwe_enc_hr.c" />
+    <ClCompile Include="..\lib_enc\swb_bwe_enc_lr.c" />
+    <ClCompile Include="..\lib_enc\swb_pre_proc.c" />
+    <ClCompile Include="..\lib_enc\swb_tbe_enc.c" />
+    <ClCompile Include="..\lib_enc\tcq_core_enc.c" />
+    <ClCompile Include="..\lib_enc\tcx_ltp_enc.c" />
+    <ClCompile Include="..\lib_enc\tcx_utils_enc.c" />
+    <ClCompile Include="..\lib_enc\tfa_enc.c" />
+    <ClCompile Include="..\lib_enc\tns_base_enc.c" />
+    <ClCompile Include="..\lib_enc\transient_detection.c" />
+    <ClCompile Include="..\lib_enc\transition_enc.c" />
+    <ClCompile Include="..\lib_enc\update_decision.c" />
+    <ClCompile Include="..\lib_enc\updt_enc.c" />
+    <ClCompile Include="..\lib_enc\updt_tar.c" />
+    <ClCompile Include="..\lib_enc\vad.c" />
+    <ClCompile Include="..\lib_enc\vad_param_updt.c" />
+    <ClCompile Include="..\lib_enc\vad_proc.c" />
+    <ClCompile Include="..\lib_enc\vbr_average_rate.c" />
+    <ClCompile Include="..\lib_enc\vlpc_1st_cod.c" />
+    <ClCompile Include="..\lib_enc\vlpc_2st_cod.c" />
+    <ClCompile Include="..\lib_enc\voiced_enc.c" />
+    <ClCompile Include="..\lib_enc\waveadjust_fec_cod.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\lib_enc\rom_enc.h" />
+    <ClInclude Include="..\lib_enc\stat_enc.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="common.vcxproj">
+      <Project>{39ec200d-7795-4ff8-b214-b24eda5526ae}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties DevPartner_IsInstrumented="0" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
